@@ -12,6 +12,7 @@ use app\home\model\Comment;
 use app\home\model\Answers;
 use app\home\model\Browse;
 use app\home\model\WechatDepartment;
+use think\Config;
 use think\Db;
 
 class Rank extends Base{
@@ -404,6 +405,7 @@ class Rank extends Base{
                 $new[$key] = $value;
             }
         }
+
         $last = array();
         foreach ($new as $k => $v){
             if($v['id'] == $personal['id']){
@@ -411,11 +413,10 @@ class Rank extends Base{
                 $personal['rank'] = $k+1;
             }
             if($k < 20){ //取小于20名排行
-                if ($v['id'] != 2){
                     $last[$k] = $v;
-                }
             }
         }
+
         $this->assign('all',$last);
         $this ->assign('deparment',$personal);
 
@@ -591,9 +592,7 @@ class Rank extends Base{
         $dpfinals = array();
         foreach ($item as $key =>$value){
             if($key < 20){
-                if ($value['id'] != 2){
                     $dpfinals[] = $value;
-                }
             }
         }
         $this->assign('week',$dpfinals);
@@ -750,9 +749,7 @@ class Rank extends Base{
         $dpfinals_m = array();
         foreach ($item_m as $key =>$value){
             if($key < 20){
-                if ($value['id'] != 2){
-                    $dpfinals_m[] = $value;
-                }
+                $dpfinals_m[] = $value;
             }
         }
         $this->assign('month',$dpfinals_m);
@@ -768,7 +765,11 @@ class Rank extends Base{
         $map = array(
             'headimgurl' => $header,
         );
-        $info = WechatUser::where('userid',$userId)->update($map);
+        $user = WechatUser::where('userid',$userId) ->find();
+        if($user !== Config::get('head_img')){
+            unlink('.'.$user['headimgurl']);//删除之前的头像
+        }
+        $info = $user ->where('userid',$userId)->update($map);
         if($info){
             return $this->success("修改成功");
         }else{
