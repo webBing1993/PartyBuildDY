@@ -158,7 +158,7 @@
 
     //上传图片并获取信息
     $('#upload').off("change").on('change',function(){
-        var up = $('.userImg>img');
+        var up = $('.userImgBox>img');
         var size = ($(this)[0].files[0].size / 1024).toFixed(2);
         if(size <= 2048){
             var img = $(this)[0].files[0];
