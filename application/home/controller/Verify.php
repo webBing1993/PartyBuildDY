@@ -102,4 +102,13 @@ class Verify extends Controller{
         Cookie::delete('dypb');
         return $this ->fetch('login');
     }
+
+    /**
+     * 党建产品介绍
+     */
+    public function introduce()
+    {
+
+        return $this->fetch();
+    }
 }
