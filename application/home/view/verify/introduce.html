@@ -3,7 +3,6 @@
 <title>之图地图</title>
 <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
 <link rel="stylesheet" href="/home/css/verify/introduce.css">
-
 {/block}
 {block name="body"}
     <div id="container"></div>
@@ -22,84 +21,98 @@
 
     AMapUI.loadUI(['overlay/SimpleMarker'], function(SimpleMarker) {
 
-        var lngLats = getGridLngLats(map.getCenter(), 7, 7);
+//        var lngLats = getGridLngLats(map.getCenter(), 7, 7);
 
         var markerSimple1 = new SimpleMarker({
             iconLabel: {},
-            iconStyle:'<img src="/home/images/verify/06.png" style="width:40px;height:40px" >',
+            showPositionPoint: true,
+            iconStyle:'<img src="/home/images/verify/06.png">',
             map: map,
             position: [113.88719559, 22.99853556]
         });
         AMap.event.addListener(markerSimple1, 'click', function() {
+            createShadow();
             infoWindow0.open(map, markerSimple1.getPosition());
         });
 
         var markerSimple2 = new SimpleMarker({
             iconLabel: {},
-            iconStyle:'<img src="/home/images/verify/07.png" style="width:40px;height:40px">',
+            showPositionPoint: true,
+            iconStyle:'<img src="/home/images/verify/07.png">',
             map: map,
             position: [121.35646641,28.39205162]
         });
         AMap.event.addListener(markerSimple2, 'click', function() {
+            createShadow();
             infoWindow4.open(map, markerSimple2.getPosition());
         });
 
         var markerSimple3 = new SimpleMarker({
-
+            showPositionPoint: true,
             //设置节点属性
             iconLabel: {},
-
-            iconStyle:'<img src="/home/images/verify/09.png" style="width:40px;height:40px">',
+            iconStyle:'<img src="/home/images/verify/09.png">',
             map: map,
             position: [119.90113735,30.59950285]
         });
         AMap.event.addListener(markerSimple3, 'click', function() {
+            createShadow();
             infoWindow1.open(map, markerSimple3.getPosition());
         });
 
         var markerSimple4 = new SimpleMarker({
             iconLabel: {},
-            iconStyle:'<img src="/home/images/verify/05.png" style="width:40px;height:40px">',
+            showPositionPoint: true,
+            iconStyle:'<img src="/home/images/verify/05.png">',
             map: map,
             position: [116.41448557, 39.97894114]
         });
         AMap.event.addListener(markerSimple4, 'click', function() {
+            createShadow();
             infoWindow7.open(map, markerSimple4.getPosition());
         });
         var markerSimple5 = new SimpleMarker({
             iconLabel: {},
-            iconStyle:'<img src="/home/images/verify/08.png" style="width:40px;height:40px">',
+            showPositionPoint: true,
+            iconStyle:'<img src="/home/images/verify/08.png">',
             map: map,
             position: [120.18540323,30.27812777]
         });
         AMap.event.addListener(markerSimple5, 'click', function() {
+            createShadow();
             infoWindow2.open(map, markerSimple5.getPosition());
         });
         var markerSimple6 = new SimpleMarker({
             iconLabel: {},
-            iconStyle:'<img src="/home/images/verify/10.png" style="width:40px;height:40px">',
+            showPositionPoint: true,
+            iconStyle:'<img src="/home/images/verify/10.png">',
             map: map,
             position: [120.00660181,30.29227485]
         });
         AMap.event.addListener(markerSimple6, 'click', function() {
+            createShadow();
             infoWindow6.open(map, markerSimple6.getPosition());
         });
         var markerSimple7 = new SimpleMarker({
             iconLabel: {},
-            iconStyle:'<img src="/home/images/verify/11.png" style="width:40px;height:40px">',
+            showPositionPoint: true,
+            iconStyle:'<img src="/home/images/verify/11.png">',
             map: map,
             position: [119.97756958,30.52056854]
         });
         AMap.event.addListener(markerSimple7, 'click', function() {
+            createShadow();
             infoWindow5.open(map, markerSimple7.getPosition());
         });
         var markerSimple8 = new SimpleMarker({
-            iconLabel: {},
-            iconStyle:'<img src="/home/images/verify/12.png" style="width:40px;height:40px">',
+            //显示定位基点
+            showPositionPoint: true,
+            iconStyle:'<img src="/home/images/verify/12.png">',
             map: map,
             position: [121.38546109,28.36639518]
         });
         AMap.event.addListener(markerSimple8, 'click', function() {
+            createShadow();
             infoWindow3.open(map, markerSimple8.getPosition());
         });
     });
@@ -149,7 +162,7 @@
             content0 = [];
     content0.push("<p>香市党建</p>");
     content0.push("<p>适用于寮步镇各党组织党建工作，通过构建一个一体化管理数据中心、多个模块化服务平台、无数分布式终端，构筑移动互联网时代下的国企党建新格局。</p>");
-    content0.push("<a href='http://www.baidu.com'>查看产品</a>");
+    content0.push("<a href='javascript:;'>查看产品</a>");
     var infoWindow0 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title0, content0.join("<br/>")),
@@ -159,7 +172,7 @@
             content1 = [];
     content1.push("<p>莫干红云</p>");
     content1.push("<p>德清地信小镇党建，以企业号的模式进行党员信息的上传下达和管理。</p>");
-    content1.push("<a href='http://www.baidu.com'>查看产品</a>");
+    content1.push("<a href='http://x.eqxiu.com/s/9DeclTiO'>查看产品</a>");
     var infoWindow1 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title1, content1.join("<br/>")),
@@ -169,7 +182,7 @@
             content2 = [];
     content2.push("<p>省直党建</p>");
     content2.push("<p>省直机关党建企业号，针对机关党建工作教育、管理、服务等特点，专门定制的移动互联网管理服务平台。</p>");
-    content2.push("<a href='http://www.baidu.com'>查看产品</a>");
+    content2.push("<a href='http://party.0571ztnet.com/home/focus/index.htm'>查看产品</a>");
     var infoWindow2 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title0, content2.join("<br/>")),
@@ -179,7 +192,7 @@
             content3 = [];
     content3.push("<p>台州个协</p>");
     content3.push("<p>台州市两新党建，用于日常党建管理，以企业号的模式进行党员信息的上传下达和管理。</p>");
-    content3.push("<a href='http://www.taobao.com'>查看产品</a>");
+    content3.push("<a href='javascript:;'>查看产品</a>");
     var infoWindow3 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title3, content3.join("<br/>")),
@@ -189,7 +202,7 @@
             content4 = [];
     content4.push("<p>台州移动</p>");
     content4.push("<p>台州移动党建企业号，通过构建一个一体化管理数据中心、多个模块化服务平台、无数分布式终端，构筑移动互联网时代下的国企党建新格局。</p>");
-    content4.push("<a href='http://www.taobao.com'>查看产品</a>");
+    content4.push("</br><a href='http://tzpb.0571ztnet.com/home/index/index.html'>查看产品</a>");
     var infoWindow4 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title4, content4.join("<br/>")),
@@ -199,7 +212,7 @@
             content5 = [];
     content5.push("<p>德清地信小镇</p>");
     content5.push("<p>用于高新区管委会日常管理、基层党建等（包括地信小镇党委的党建管理、公益服务等）</p>");
-    content5.push("<a href='http://www.taobao.com'>查看产品</a>");
+    content5.push("<a href='http://mxxz.0571ztnet.com/home/index/index'>查看产品</a>");
     var infoWindow5 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title5, content5.join("<br/>")),
@@ -209,7 +222,7 @@
             content6 = [];
     content6.push("<p>梦想小镇</p>");
     content6.push("<p>梦想小镇党建订阅号，打造一个宣传基层党建的“微窗口”，服务基层党建的“微平台”。</p>");
-    content6.push("<a href='http://www.taobao.com'>查看产品</a>");
+    content6.push("<a href='http://mxxz.0571ztnet.com/home/index/index'>查看产品</a>");
     var infoWindow6 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title6, content6.join("<br/>")),
@@ -219,13 +232,27 @@
             content7 = [];
     content7.push("<p>中国遥感应用协会</p>");
     content7.push("<p>德清地信小镇党建，以企业号的模式进行党员信息的上传下达和管理。</p>");
-    content7.push("<a href='http://www.taobao.com'>查看产品</a>");
+    content7.push("<a href='javascript:;'>查看产品</a>");
     var infoWindow7 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title7, content7.join("<br/>")),
         offset: new AMap.Pixel(16, -45)
     });
 
+    //构建弹窗阴影
+    function createShadow(){
+        var shadow = document.createElement('div');
+        shadow.className = "shadow";
+        shadow.style.position = "fixed";
+        shadow.style.width = "100%";
+        shadow.style.height = "100%";
+        shadow.style.left = 0;
+        shadow.style.top = 0;
+        shadow.style.backgroundColor = "#333";
+        shadow.style.opacity = ".5";
+        shadow.style.zIndex = "14";
+        $('.amap-overlays').append(shadow);
+    }
     //构建自定义信息窗体
     function createInfoWindow(title, content) {
         var info = document.createElement("div");
@@ -269,6 +296,7 @@
     //关闭信息窗体
     function closeInfoWindow() {
         map.clearInfoWindow();
+        $(".shadow").hide();
     }
 
 </script>

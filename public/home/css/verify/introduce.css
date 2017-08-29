@@ -16,11 +16,17 @@ div.info-top div {
     line-height: 31px;
     padding: 0 10px;
 }
+div.info-top{
+    background-color: #fff !important;
+}
 div.info-top img {
     position: absolute;
     top: 5px;
     right: 10px;
     transition-duration: 0.25s;
+}
+div.info-top>img{
+    opacity: .5;
 }
 div.info-top>div>img:first-of-type{
     width:80px;
@@ -34,20 +40,25 @@ div.info-top img:hover {
 }
 div.info-middle {
     font-size: 12px;
-    padding: 85px 6px 6px;
+    padding: 95px 6px 6px;
     line-height: 20px;
     border-radius: 0 0 8px 8px;
 }
 div.info-middle p:first-of-type{
     text-align: center;
+    color: #333;
+    font-size: 16px;
 }
 div.info-middle p:nth-of-type(2){
-    text-align: left;
+    text-align: justify;
     margin: 0 20px;
-    padding: 20px 10px 50px;
+    padding: 20px 10px 30px;
+    /*height: 170px;*/
     border-radius: 10px;
-    background-color: rgba(0,0,0,.2);
-    color: #333333;
+    background-color: #f3f5f7;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
 }
 div.info-bottom {
     height: 0px;
@@ -70,7 +81,7 @@ div.info-middle a{
     background-color: orange;
     text-align: center;
     border-radius: 10px;
-    margin: 0 20px;
+    margin: 15px 20px 6px;
 }
 span {
     margin-left: 5px;
@@ -93,7 +104,10 @@ span {
     bottom: auto !important;
     left: 50% !important;
     margin-left: -40%;
-    margin-top: -50%;
+    margin-top: -60%;
+    z-index: 12;
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px orange;
 }
 .amap-marker .amap-icon{
     width: 30px !important;
@@ -111,4 +125,16 @@ span {
     font-size: 16px;
     font-style: italic;
     text-decoration: line-through;
+}
+.amap-simple-marker-icon img{
+    width:50px;
+    height:50px;
+    margin-left: -16px;
+    margin-top: -18px;
+}
+.amap-simple-marker-position-point{
+    background-color: blue !important;
+}
+.amap-maptypecontrol, .amap-overviewcontrol, .amap-scalecontrol, .amap-toolbar{
+    z-index: 10;
 }
