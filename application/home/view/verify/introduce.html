@@ -15,8 +15,8 @@
     //地图初始化时，在地图上添加一个marker标记,鼠标点击marker可弹出自定义的信息窗体
     var map = new AMap.Map("container", {
         resizeEnable: true,
-        center: [104.481181, 25.989792],
-        zoom: 0
+        center: [116.963421,32.269183],
+        zoom: 5
     });
 
     AMapUI.loadUI(['overlay/SimpleMarker'], function(SimpleMarker) {
@@ -162,7 +162,7 @@
             content0 = [];
     content0.push("<p>香市党建</p>");
     content0.push("<p>适用于寮步镇各党组织党建工作，通过构建一个一体化管理数据中心、多个模块化服务平台、无数分布式终端，构筑移动互联网时代下的国企党建新格局。</p>");
-    content0.push("<a href='javascript:;'>查看产品</a>");
+    content0.push("<a href='javascript:;' style='background-color: #d7d7d7;'>查看产品</a>");
     var infoWindow0 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title0, content0.join("<br/>")),
@@ -172,7 +172,7 @@
             content1 = [];
     content1.push("<p>莫干红云</p>");
     content1.push("<p>德清地信小镇党建，以企业号的模式进行党员信息的上传下达和管理。</p>");
-    content1.push("<a href='http://x.eqxiu.com/s/9DeclTiO'>查看产品</a>");
+    content1.push("<a href='javascript:;' style='background-color: #d7d7d7;'>查看产品</a>");
     var infoWindow1 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title1, content1.join("<br/>")),
@@ -180,19 +180,19 @@
     });
     var title2 = '<img src="/home/images/verify/08_1.png">',
             content2 = [];
-    content2.push("<p>省直党建</p>");
+    content2.push("<p>浙江机关党建</p>");
     content2.push("<p>省直机关党建企业号，针对机关党建工作教育、管理、服务等特点，专门定制的移动互联网管理服务平台。</p>");
-    content2.push("<a href='http://party.0571ztnet.com/home/focus/index.htm'>查看产品</a>");
+    content2.push("<a href='javascript:;' style='background-color: #d7d7d7;'>查看产品</a>");
     var infoWindow2 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
-        content: createInfoWindow(title0, content2.join("<br/>")),
+        content: createInfoWindow(title2, content2.join("<br/>")),
         offset: new AMap.Pixel(16, -45)
     });
     var title3 = '<img src="/home/images/verify/12_1.png">',
             content3 = [];
-    content3.push("<p>台州个协</p>");
+    content3.push("<p>台州市个协党建</p>");
     content3.push("<p>台州市两新党建，用于日常党建管理，以企业号的模式进行党员信息的上传下达和管理。</p>");
-    content3.push("<a href='javascript:;'>查看产品</a>");
+    content3.push("<a href='javascript:;' style='background-color: #d7d7d7;'>查看产品</a>");
     var infoWindow3 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title3, content3.join("<br/>")),
@@ -200,7 +200,7 @@
     });
     var title4 = '<img src="/home/images/verify/07_1.png">',
             content4 = [];
-    content4.push("<p>台州移动</p>");
+    content4.push("<p>中国移动台州分公司党建</p>");
     content4.push("<p>台州移动党建企业号，通过构建一个一体化管理数据中心、多个模块化服务平台、无数分布式终端，构筑移动互联网时代下的国企党建新格局。</p>");
     content4.push("</br><a href='http://tzpb.0571ztnet.com/home/index/index.html'>查看产品</a>");
     var infoWindow4 = new AMap.InfoWindow({
@@ -210,9 +210,9 @@
     });
     var title5 = '<img src="/home/images/verify/11_1.png">',
             content5 = [];
-    content5.push("<p>德清地信小镇</p>");
+    content5.push("<p>.德清地信小镇党建</p>");
     content5.push("<p>用于高新区管委会日常管理、基层党建等（包括地信小镇党委的党建管理、公益服务等）</p>");
-    content5.push("<a href='http://mxxz.0571ztnet.com/home/index/index'>查看产品</a>");
+    content5.push("<a href='http://mgspb.0574ztnet.com/home/work/touristmain2'>查看产品</a>");
     var infoWindow5 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title5, content5.join("<br/>")),
@@ -220,7 +220,7 @@
     });
     var title6 = '<img src="/home/images/verify/10_1.jpg">',
             content6 = [];
-    content6.push("<p>梦想小镇</p>");
+    content6.push("<p>梦想小镇红色驿站</p>");
     content6.push("<p>梦想小镇党建订阅号，打造一个宣传基层党建的“微窗口”，服务基层党建的“微平台”。</p>");
     content6.push("<a href='http://mxxz.0571ztnet.com/home/index/index'>查看产品</a>");
     var infoWindow6 = new AMap.InfoWindow({
@@ -230,9 +230,9 @@
     });
     var title7 = '<img src="/home/images/verify/05_1.jpg">',
             content7 = [];
-    content7.push("<p>中国遥感应用协会</p>");
+    content7.push("<p>中国遥感协会党建（订阅号）</p>");
     content7.push("<p>德清地信小镇党建，以企业号的模式进行党员信息的上传下达和管理。</p>");
-    content7.push("<a href='javascript:;'>查看产品</a>");
+    content7.push("<a href='http://zgyg.0571ztnet.com/home/verify/memberslogin.html'>查看产品</a>");
     var infoWindow7 = new AMap.InfoWindow({
         isCustom: true,  //使用自定义窗体
         content: createInfoWindow(title7, content7.join("<br/>")),
