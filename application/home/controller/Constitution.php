@@ -30,8 +30,8 @@ class Constitution extends Base {
         $map = array(
             'userid' => $userid,
         );
-        $Answers = Answers::where($map)->order('id desc')->limit(1)->find();
-        if(empty($Answers)){   // 没有数据
+//        $Answers = Answers::where($map)->order('id desc')->limit(1)->find();
+//        if(empty($Answers)){   // 没有数据
             //取单选
             $arr=Question::all(['type'=>0]);
             foreach($arr as $value){
@@ -55,99 +55,99 @@ class Constitution extends Base {
             }
             $this->assign('question',$question);
             return $this->fetch();
-        }else{  //  有数据
-            $user_day = date("j", $Answers['create_time']);  // 获取用户答题的日期
-            $user_mon = date("n", $Answers['create_time']);  // 获取用户答题的月份  无前导0
-            $user_year = date("Y", $Answers['create_time']);  // 获取用户答题的年
-            if($day != $user_day ){  // 当天 还未答题
-                //取单选
-                $arr=Question::all(['type'=>0]);
-                foreach($arr as $value){
-                    $ids[]=$value->id;
-                }
-                //随机获取单选的题目
-                $num=3;//题目数目
-                $data=array();
-                while(true){
-                    if(count($data) == $num){
-                        break;
-                    }
-                    $index=mt_rand(0,count($ids)-1);
-                    $res=$ids[$index];
-                    if(!in_array($res,$data)){
-                        $data[]=$res;
-                    }
-                }
-                foreach($data as $value){
-                    $question[]=Question::get($value);
-                }
-                $this->assign('question',$question);
-                return $this->fetch();
-            }else{
-                if ($mon != $user_mon){
-                    //取单选
-                    $arr=Question::all(['type'=>0]);
-                    foreach($arr as $value){
-                        $ids[]=$value->id;
-                    }
-                    //随机获取单选的题目
-                    $num=3;//题目数目
-                    $data=array();
-                    while(true){
-                        if(count($data) == $num){
-                            break;
-                        }
-                        $index=mt_rand(0,count($ids)-1);
-                        $res=$ids[$index];
-                        if(!in_array($res,$data)){
-                            $data[]=$res;
-                        }
-                    }
-                    foreach($data as $value){
-                        $question[]=Question::get($value);
-                    }
-                    $this->assign('question',$question);
-                    return $this->fetch();
-                }else{
-                    if($year != $user_year){
-                        //取单选
-                        $arr=Question::all(['type'=>0]);
-                        foreach($arr as $value){
-                            $ids[]=$value->id;
-                        }
-                        //随机获取单选的题目
-                        $num=3;//题目数目
-                        $data=array();
-                        while(true){
-                            if(count($data) == $num){
-                                break;
-                            }
-                            $index=mt_rand(0,count($ids)-1);
-                            $res=$ids[$index];
-                            if(!in_array($res,$data)){
-                                $data[]=$res;
-                            }
-                        }
-                        foreach($data as $value){
-                            $question[]=Question::get($value);
-                        }
-                        $this->assign('question',$question);
-                        return $this->fetch();
-                    }else{
-                        // 当天已经答过题
-                        $Qid = json_decode($Answers->question_id);
-                        $rights=json_decode($Answers->value);
-                        $re = array();
-                        foreach($Qid as $key => $value){
-                            $re[$key] = Question::get($value);
-                            $re[$key]['right'] = $rights[$key];
-                        }
-                        $this->assign('question',$re);
-                        return $this->fetch('scan');
-                    }
-                }
-            }
-        }
+//        }else{  //  有数据
+//            $user_day = date("j", $Answers['create_time']);  // 获取用户答题的日期
+//            $user_mon = date("n", $Answers['create_time']);  // 获取用户答题的月份  无前导0
+//            $user_year = date("Y", $Answers['create_time']);  // 获取用户答题的年
+//            if($day != $user_day ){  // 当天 还未答题
+//                //取单选
+//                $arr=Question::all(['type'=>0]);
+//                foreach($arr as $value){
+//                    $ids[]=$value->id;
+//                }
+//                //随机获取单选的题目
+//                $num=3;//题目数目
+//                $data=array();
+//                while(true){
+//                    if(count($data) == $num){
+//                        break;
+//                    }
+//                    $index=mt_rand(0,count($ids)-1);
+//                    $res=$ids[$index];
+//                    if(!in_array($res,$data)){
+//                        $data[]=$res;
+//                    }
+//                }
+//                foreach($data as $value){
+//                    $question[]=Question::get($value);
+//                }
+//                $this->assign('question',$question);
+//                return $this->fetch();
+//            }else{
+//                if ($mon != $user_mon){
+//                    //取单选
+//                    $arr=Question::all(['type'=>0]);
+//                    foreach($arr as $value){
+//                        $ids[]=$value->id;
+//                    }
+//                    //随机获取单选的题目
+//                    $num=3;//题目数目
+//                    $data=array();
+//                    while(true){
+//                        if(count($data) == $num){
+//                            break;
+//                        }
+//                        $index=mt_rand(0,count($ids)-1);
+//                        $res=$ids[$index];
+//                        if(!in_array($res,$data)){
+//                            $data[]=$res;
+//                        }
+//                    }
+//                    foreach($data as $value){
+//                        $question[]=Question::get($value);
+//                    }
+//                    $this->assign('question',$question);
+//                    return $this->fetch();
+//                }else{
+//                    if($year != $user_year){
+//                        //取单选
+//                        $arr=Question::all(['type'=>0]);
+//                        foreach($arr as $value){
+//                            $ids[]=$value->id;
+//                        }
+//                        //随机获取单选的题目
+//                        $num=3;//题目数目
+//                        $data=array();
+//                        while(true){
+//                            if(count($data) == $num){
+//                                break;
+//                            }
+//                            $index=mt_rand(0,count($ids)-1);
+//                            $res=$ids[$index];
+//                            if(!in_array($res,$data)){
+//                                $data[]=$res;
+//                            }
+//                        }
+//                        foreach($data as $value){
+//                            $question[]=Question::get($value);
+//                        }
+//                        $this->assign('question',$question);
+//                        return $this->fetch();
+//                    }else{
+//                        // 当天已经答过题
+//                        $Qid = json_decode($Answers->question_id);
+//                        $rights=json_decode($Answers->value);
+//                        $re = array();
+//                        foreach($Qid as $key => $value){
+//                            $re[$key] = Question::get($value);
+//                            $re[$key]['right'] = $rights[$key];
+//                        }
+//                        $this->assign('question',$re);
+//                        return $this->fetch('scan');
+//                    }
+//                }
+//            }
+//        }
     }
     /*
      * 每日一课 提交
