@@ -21,8 +21,8 @@
         margin-left: 2.6vw;
     }
     .list_content .title {
-        margin-top: 2vw;
-        margin-bottom: 2vw;
+        margin-top: 1.6vw;
+        margin-bottom: 1.6vw;
         font-size: 1.46rem;
         color: #333;
     }
@@ -31,10 +31,15 @@
         font-size: 1.3rem;
         line-height: 1.5;
         text-align: justify;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
+    }
+    @media screen and (max-height: 480px) {
+        .list_img {
+            height: 36.4vw;
+            margin-top: 2vw;
+        }
+        .list_content .title {
+            margin-top: 0;
+        }
     }
 </style>
 {/block}
