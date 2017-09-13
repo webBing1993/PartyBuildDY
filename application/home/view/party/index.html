@@ -1,0 +1,92 @@
+{extend name="public/common"}
+
+{block name="style"}
+<title>党章抄写</title>
+<link rel="stylesheet" href="/home/css/party/party.css">
+{/block}
+
+{block name="body"}
+<div class="bgbox">
+	<div class="top clear">
+		<div class="tab fl"><a href="{:Url('Party/index')}">党章抄写</a></div>
+		<div class="tab fl"><a href="{:Url('Party/rank')}">积分排行</a></div>
+	</div>
+	<div class="bg_t"></div>
+	<div class="bg_b">
+		{eq name="personal.restart" value="1"}
+		<div class="recopy" data-toggle="modal" data-target="#restart">重新抄写</div>
+		{else/}
+		<div class="times">
+			您已完成<span>{$copy.percent}</span>%
+		</div>
+		{/eq}
+
+	</div>
+</div>
+<div class="content">
+	<ul class="list">
+		{volist name="list" id="vo"}
+		{if condition="$vo.id < $personal.chapter"}
+		<li class="over">
+		{elseif condition="$vo.id > $personal.chapter" /}
+		<li>
+		{else/}
+		<li class="active">
+		{/if}
+		<a href="{:Url('Party/copy?id='.$vo['id'])}">
+			<span class="num">{$vo.id}</span>
+			<span class="title">{$vo.title}</span>
+		</a>
+		</li>
+		{/volist}
+	</ul>
+</div>
+<!--模态框:重新抄写-->
+<div class="modal fade" id="restart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">提示：</h4>
+			</div>
+			<div class="modal-body" style="font-size: 14px">
+				您的本次数据将被清空，是否确定重新抄写
+			</div>
+			<div class="modal-footer">
+				<button  class="btn btn-danger" type="button" id="clear">确定</button>
+				<button class="btn btn-default" data-dismiss="modal" type="button">返回</button>
+			</div>
+		</div>
+	</div>
+</div>
+{/block}
+
+{block name="script"}
+<script>
+$(function(){
+	$('#clear').on('click', function( ){
+		$.ajax({
+			type:"post",
+			url:"{:Url('Party/restart')}",
+			processData : false,
+			contentType : false,
+			success:function(e){
+				window.location.reload();
+			}
+		});
+	});
+	//摸态框居中
+	$('#restart').on('show.bs.modal', centerModals);
+});
+//摸态框居中
+function centerModals() {
+	$('#restart').each(function(i) {
+		var $clone = $(this).clone().css('display', 'block').appendTo('body');
+		var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+		top = top > 0 ? top : 0;
+		$clone.remove();
+		$(this).find('.modal-content').css({"margin-top":top});
+	});
+}
+</script>
+{/block}
