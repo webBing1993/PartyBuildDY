@@ -1,10 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{extend name="public/common"}
+{block name="style"}
+<title>党员介绍</title>
+<style>
+    .lists li {
+        border-bottom: 1px solid #ccc;
+        padding: 6vw 4vw;
+    }
+    .list_img {
+        width: 24vw;
+        height: 33.4vw;
+    }
+    .list_img img {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        border-radius: 1.6vw;
+    }
+    .list_content {
+        width: 64vw;
+        margin-left: 2.6vw;
+    }
+    .list_content .title {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 1.46rem;
+        color: #333;
+    }
+    .list_content .content {
+        color: #666;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        text-align: justify;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+</style>
+{/block}
+{block name="body"}
+<div class="lists">
+    <ul>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_0.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">沈杰（男）</div>
+                <div class="content">
+                    1957年5月生，于1994年9月加入中国共产党， 系武汉测绘科技大学测绘科学技术研究专业2000级在职研究生，2017年8月加入杭州之图网络科技有限公司，任总经理一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_1.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">代文（男）</div>
+                <div class="content">
+                    1977年12月生，于2001年7月加入中国共产党，系武汉大学计算机软件专业95级学生，2016年6月加入杭州之图网络科技有限公司，任副总经理一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_2.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">杨泽中（男）</div>
+                <div class="content">
+                    1956年12月生，于2004年7月加入中国共产党，系黑龙江省建筑工程学院工业与民用建筑专业1985级学生，2016年11月加入杭州之图网络科技有限公司，任专家顾问一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_3.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">姚家扬（男）</div>
+                <div class="content">
+                    1990年9月生，于2010年12月加入中国共产党， 系杭州电子科技大学自动化专业09级学生，2016年5月加入杭州之图网络科技有限公司，任产品总监一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_4.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">齐永兴（男）</div>
+                <div class="content">
+                    1991年4月生，于2011年12月加入中国共产党，浙江科技学院物流工程专业2009级学生，2016年4月加入杭州之图网络科技有限公司，任运营经理一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_5.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">任通（男）</div>
+                <div class="content">
+                    1991年10月生，于2012年4月加入中国共产党，系杭州电子科技大学自动化专业2009级学生，2016年6月加入杭州之图网络科技有限公司，任产品经理一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_6.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">张琳（女）</div>
+                <div class="content">
+                    1993年1月生，于2013年6月加入中国共产党，系杭州师范大学理论物理专业2014级学生，2017年7月加入杭州之图网络科技有限公司，任GIS开发工程师一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_7.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">何换（女）</div>
+                <div class="content">
+                    1987年9月生，于2008年11月加入中国共产党，系浙江工商大学杭州商学院工商管理专业2006级学生，于2016年3月加入杭州之图网络科技有限公司，任人事主管一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_8.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">汤银帆（女）</div>
+                <div class="content">
+                    1994年7月生，于2014年6月加入中国共产党，浙江理工大学科技与艺术学院大学市场营销专业2012级学生，2017年2月加入杭州之图网络科技有限公司，任渠道专员一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_9.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">李娜（女）</div>
+                <div class="content">
+                    1994年12月生，于2014年11月加入中国共产党，系杭州师范大学电子信息工程专业2012级学生，2016年7月加入杭州之图网络科技有限公司，任UI设计工程师一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_10.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">刘飞鹏（男）</div>
+                <div class="content">
+                    于2008年7月加入中国共产党，系武警北京特警学院武警特战指挥专业2004级学生，2017年2月加入杭州之图网络科技有限公司，任渠道部经理一职。
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <div class="list_img fl">
+                <img src="/home/images/introduce/personal_11.png" alt="">
+            </div>
+            <div class="list_content fl">
+                <div class="title">熊纲强（男）</div>
+                <div class="content">
+                    1992年6月生，于2015年5月加入中国共产党，系江西理工大学金属材料工程专业2011级学生，2017年7月加入杭州之图网络科技有限公司，任后端开发工程师一职。
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{/block}
+{block name="script"}
 
-</body>
-</html>
+{/block}
