@@ -39,7 +39,7 @@ body{
 }
 .bg_t{
 	width: 100vw;
-	height: 74px;
+	height: 10vw;
 	background: url("/home/images/party/copy_t.png") no-repeat;
 	background-size: 100% 100%;
 	position: fixed;
@@ -98,22 +98,28 @@ body{
 /*目录*/
 .list{
 	width: 85%;
-	margin: 125px auto;
+	margin: 0 auto;
+	margin-top:26vw;
 	padding-bottom: 100px;
+}
+@media screen and (min-width: 1024px){
+	.list{
+		margin-top:16vw;
+	}
 }
 .list li{
 	margin-bottom: 20px;
-	height: 30px;
+	height: 8vw;
 }
 .list li a{
-	height: 30px;
-	line-height: 30px;
+	height: 8vw;
+	line-height: 8vw;
 	display: block;
 }
 .list .num{
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
+	width: 8vw;
+	height: 8vw;
+	line-height: 8vw;
 	text-align: center;
 	-webkit-border-radius: 2px;
 	border-radius:2px;
@@ -126,8 +132,8 @@ body{
 }
 .list .title{
 	width: 85%;
-	height: 30px;
-	line-height: 30px;
+	height: 8vw;
+	line-height: 8vw;
 	-webkit-border-radius: 2px;
 	border-radius:2px;
 	color:#d10000;
@@ -153,7 +159,7 @@ body{
 	height: 0;
 	border-top: 8px solid transparent;
 	border-bottom: 8px solid transparent;
-	top: 6px;
+	top: 3vw;
 }
 .active a:before{
 	border-left: 10px solid #d10000;
