@@ -111,4 +111,9 @@ class Verify extends Controller{
 
         return $this->fetch();
     }
+
+    public function intro (){
+
+        return $this ->fetch();
+    }
 }

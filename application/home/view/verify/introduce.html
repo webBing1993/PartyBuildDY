@@ -1,10 +1,33 @@
 {extend name="public/pure"}
 {block name="style"}
-<title>党建产品</title>
+<title>之图产品案例集</title>
 <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
 <link rel="stylesheet" href="/home/css/verify/introduce.css">
+<style>
+    .changemap{
+        width:10.8vw;
+        height:10.8vw;
+        background: #f1f1f1;
+        position: absolute;
+        top:4vw;
+        right:0;
+        /*border-radius: 50%;*/
+        border-top-left-radius:50%;
+        border-bottom-left-radius:50%;
+        z-index: 999;
+    }
+    .changemap i{
+        position: relative;
+        left: 5.4vw;
+        color: #f00;
+        font-size: 5vw;
+        top: 2.8vw;
+        margin-left: -1vw;
+    }
+</style>
 {/block}
 {block name="body"}
+<div class="changemap"><i class="fa fa-th-large"></i></div>
     <div id="container"></div>
 {/block}
 {block name="script"}
@@ -298,6 +321,10 @@
         map.clearInfoWindow();
         $(".shadow").hide();
     }
+
+    $(".changemap").click(function(){
+        window.location.href = "/home/verify/intro.html"
+    })
 
 </script>
 

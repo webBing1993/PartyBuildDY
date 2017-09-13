@@ -1,0 +1,94 @@
+{extend name="public/pure"}
+
+{block name="style"}
+<title>党建微视频</title>
+<style>
+    .list{
+        padding:2vw 2vw;
+    }
+    .list li{
+        overflow: hidden;
+        padding-top: 6vw;
+        border-bottom: 1px solid #ddd;
+    }
+    .list li:first-child{
+        padding-top: 0vw;
+    }
+    .title{
+        text-align: center;
+    }
+    .title p{
+        display: inline-block;
+        text-align: left;
+        padding: 4vw 0;
+        font-size: 1rem;
+    }
+    .time{
+        width:100%;
+        text-align: right;
+        line-height:4vw;
+        padding: 4vw 0;
+    }
+    .time img{
+        width:4vw;
+        height:4vw;
+        vertical-align: middle;
+    }
+    .time span{
+        font-size: 0.8rem;
+        display: inline-block;
+        height: 4vw;
+        line-height: 4vw;
+        margin-left: 0.2rem;
+        color: #999;
+    }
+    .time p{
+        display: inline-block;
+        float:left;
+        left:0;
+        color: #333;
+    }
+    iframe{
+        width:100%;
+        height:50vw;
+    }
+</style>
+{/block}
+
+{block name="body"}
+<div class="list">
+    <li>
+        <iframe height="250" width="100%" src='http://player.youku.com/embed/XMjk5Mjc4ODEzMg==' frameborder=0 'allowfullscreen'></iframe>
+        <div class="time">
+            <p>之图科技智慧党建简介</p>
+            <img src="/home/images/common/riqi.png" alt="">
+             <span>2017-08-15</span>
+        </div>
+    </li>
+
+    <li>
+        <iframe height="200" width="100%" src='http://player.youku.com/embed/XMzAwMDA4MTIyOA==' frameborder=0 'allowfullscreen'></iframe>
+        <div class="time">
+            <p>两分钟看懂十九大</p>
+            <img src="/home/images/common/riqi.png" alt="">
+            <span>2017-09-01</span>
+        </div>
+    </li>
+
+    <li>
+        <iframe frameborder="0" width="100%" height="200" src="https://v.qq.com/iframe/player.html?vid=a05456jpj5r&tiny=0&auto=0" allowfullscreen></iframe>
+        <div class="time">
+            <p>《大国外交》 | 厉害了，我的国</p>
+            <img src="/home/images/common/riqi.png" alt="">
+            <span>2017-09-08</span>
+        </div>
+    </li>
+
+</div>
+{/block}
+
+{block name="script"}
+<script>
+
+</script>
+{/block}

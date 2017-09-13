@@ -39,7 +39,7 @@ a:link,a:visited{
     /*height:7rem;*/
     overflow: hidden;
     text-align:center;
-    margin-bottom: 5vw;
+    margin-bottom: 10vw;
 }
 .tablist .icon{
     width:50%;
@@ -100,7 +100,7 @@ a:link,a:visited{
     -o-animation:myfirst 1s ease both;
 }
 .tabBox{
-    margin-top: 5vw;
+    margin-top: 20vw;
 }
 #sub1{
     display: block;
