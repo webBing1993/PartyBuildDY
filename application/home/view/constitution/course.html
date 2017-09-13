@@ -57,6 +57,7 @@ $(function(){
 			success:function(data){
 				$('.score').html(data.url.score);
 				$('#true1').html('<br>1.'+data.url.right[1]+'，2.'+data.url.right[2]+'，3.'+data.url.right[3]);
+				$(".modal").unbind("click");
 				var link='scan';
 				$('#link').click(function(){window.location.replace(link+'/id/'+data.url.id);});
 			}
