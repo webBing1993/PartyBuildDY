@@ -22,7 +22,7 @@
 	</div>
 	{/volist}
 </div>
-<div class="submit" data-toggle="modal" data-target="#modal">确认提交</div>
+<div class="submit">确认提交</div>
 <!--模态框-->
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -57,6 +57,7 @@ $(function(){
 			success:function(data){
 				$('.score').html(data.url.score);
 				$('#true1').html('<br>1.'+data.url.right[1]+'，2.'+data.url.right[2]+'，3.'+data.url.right[3]);
+				$('#modal').modal('show');
 				$(".modal").unbind("click");
 				var link='scan';
 				$('#link').click(function(){window.location.replace(link+'/id/'+data.url.id);});
