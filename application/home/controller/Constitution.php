@@ -189,7 +189,8 @@ class Constitution extends Base {
                 $status[$key] = 0;
             }
         }
-        $users = session('userId');
+//        $users = session('userId');
+        $users = "060941edf92a51b75c6dfbeee67a8d35";
         //将分数添加至用户积分排名
         $wechatModel = new WechatUser();
         $wechatModel->where('userid',$users)->setInc('score',$score);

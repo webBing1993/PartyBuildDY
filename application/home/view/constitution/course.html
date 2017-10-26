@@ -61,6 +61,9 @@ $(function(){
 				$(".modal").unbind("click");
 				var link='scan';
 				$('#link').click(function(){window.location.replace(link+'/id/'+data.url.id);});
+			},
+			error:function(data){
+				alert(JSON.stringify(data));
 			}
 		});
 	});
