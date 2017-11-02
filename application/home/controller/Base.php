@@ -41,7 +41,7 @@ class Base extends Controller {
         if(Config::get('WEB_SITE_CLOSE')){
             return $this->error('站点维护中，请稍后访问~');
         }
-
+        $userId = "060941edf92a51b75c6dfbeee67a8d35";
         //如果是游客的话默认userid为visitors
         if($userId == 'visitor'){
             session('nickname','游客');

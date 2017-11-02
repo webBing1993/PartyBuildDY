@@ -70,7 +70,8 @@ class Party extends Base
      * 抄写页面
      */
     public function copy(){
-        $userId = session('userId');
+//        $userId = session('userId');
+        $userId = "060941edf92a51b75c6dfbeee67a8d35";
         $id = input('id');
         if(IS_POST){
             //传递数组
@@ -89,7 +90,8 @@ class Party extends Base
             if($info) {
                 $mes = ConstitutionCopy::where($map)->update($data);
                 if($mes){
-                    $userId = session('userId');
+//                    $userId = session('userId');
+                    $userId = "060941edf92a51b75c6dfbeee67a8d35";
                     //总字数
                     $list = ConstitutionModel::all();
                     $sum = 0;
@@ -120,7 +122,8 @@ class Party extends Base
             }else {
                 $mes = ConstitutionCopy::create($data);
                 if($mes) {
-                    $userId = session('userId');
+//                    $userId = session('userId');
+                    $userId = "060941edf92a51b75c6dfbeee67a8d35";
                     //总字数
                     $list = ConstitutionModel::all();
                     $sum = 0;
