@@ -309,7 +309,7 @@ function pushHistory(){
 function fix(c){
 	 var foot =$('.foot');
 	 c.on('focus', function(){
-		 foot.removeClass('fix');
+//		 foot.removeClass('fix');
 	 });
 	 c.on('blur', function(){
 		 foot.addClass('fix');
@@ -388,8 +388,8 @@ function saveCopy(){
 					 timer.fadeOut();
 					 up.text('上传成功');
 					 setTimeout(function(){
-						 objNow=null;
 						 window.history.go(-1);
+						 objNow = null;
 					 },1000)
 				 },2000)
 			 }
