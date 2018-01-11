@@ -5,10 +5,15 @@
     <link rel="stylesheet" href="/static/swiper/swiper-3.3.1.min.css">
     <link rel="stylesheet" href="/home/css/common/tip.css">
     <link rel="stylesheet" href="/home/css/common/rem.css">
+<style>
+    .banner .swiper-container {
+        height: 100%;
+    }
+</style>
 {/block}
 {block name="body"}
     <!--banner-->
-    <div class="banners">
+    <div class="banner">
         <div class="swiper-container">
             <div class="imgs swiper-wrapper">
                 {volist name="lists" id="ls"}
